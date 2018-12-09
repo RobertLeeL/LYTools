@@ -17,6 +17,8 @@
 		073087A221BD005F002BF8F0 /* LYToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087A121BD005F002BF8F0 /* LYToolsUITests.m */; };
 		073087B221BD049B002BF8F0 /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087B121BD049B002BF8F0 /* NSString+category.m */; };
 		073087B721BD0BB7002BF8F0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087B621BD0BB7002BF8F0 /* UIView+Frame.m */; };
+		073087BB21BD1125002BF8F0 /* UIImage+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BA21BD1125002BF8F0 /* UIImage+category.m */; };
+		073087BF21BD14D8002BF8F0 /* UIColor+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BE21BD14D8002BF8F0 /* UIColor+category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		073087B121BD049B002BF8F0 /* NSString+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+category.m"; sourceTree = "<group>"; };
 		073087B521BD0BB7002BF8F0 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		073087B621BD0BB7002BF8F0 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		073087B921BD1125002BF8F0 /* UIImage+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+category.h"; sourceTree = "<group>"; };
+		073087BA21BD1125002BF8F0 /* UIImage+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+category.m"; sourceTree = "<group>"; };
+		073087BD21BD14D8002BF8F0 /* UIColor+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+category.h"; sourceTree = "<group>"; };
+		073087BE21BD14D8002BF8F0 /* UIColor+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,8 @@
 		073087AF21BD033B002BF8F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				073087BC21BD14C0002BF8F0 /* UIColor */,
+				073087B821BD10D0002BF8F0 /* UIImage */,
 				073087B421BD0B9C002BF8F0 /* UIView */,
 				073087B321BD0B90002BF8F0 /* NSString */,
 			);
@@ -164,6 +172,24 @@
 				073087B621BD0BB7002BF8F0 /* UIView+Frame.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		073087B821BD10D0002BF8F0 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				073087B921BD1125002BF8F0 /* UIImage+category.h */,
+				073087BA21BD1125002BF8F0 /* UIImage+category.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		073087BC21BD14C0002BF8F0 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				073087BD21BD14D8002BF8F0 /* UIColor+category.h */,
+				073087BE21BD14D8002BF8F0 /* UIColor+category.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0730878221BD005D002BF8F0 /* ViewController.m in Sources */,
+				073087BF21BD14D8002BF8F0 /* UIColor+category.m in Sources */,
+				073087BB21BD1125002BF8F0 /* UIImage+category.m in Sources */,
 				0730878D21BD005F002BF8F0 /* main.m in Sources */,
 				0730877F21BD005D002BF8F0 /* AppDelegate.m in Sources */,
 				073087B721BD0BB7002BF8F0 /* UIView+Frame.m in Sources */,
