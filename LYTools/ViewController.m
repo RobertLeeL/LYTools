@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Tools/NSString+category.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *string = @"2018-12-09 12:20:30";
+    NSDate *date =  [string dateFromString];
+    NSLog(@"%@",date);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

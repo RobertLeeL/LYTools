@@ -15,6 +15,8 @@
 		0730878D21BD005F002BF8F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730878C21BD005F002BF8F0 /* main.m */; };
 		0730879721BD005F002BF8F0 /* LYToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730879621BD005F002BF8F0 /* LYToolsTests.m */; };
 		073087A221BD005F002BF8F0 /* LYToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087A121BD005F002BF8F0 /* LYToolsUITests.m */; };
+		073087B221BD049B002BF8F0 /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087B121BD049B002BF8F0 /* NSString+category.m */; };
+		073087B721BD0BB7002BF8F0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087B621BD0BB7002BF8F0 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		0730879D21BD005F002BF8F0 /* LYToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073087A121BD005F002BF8F0 /* LYToolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYToolsUITests.m; sourceTree = "<group>"; };
 		073087A321BD005F002BF8F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		073087B021BD049B002BF8F0 /* NSString+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
+		073087B121BD049B002BF8F0 /* NSString+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+category.m"; sourceTree = "<group>"; };
+		073087B521BD0BB7002BF8F0 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		073087B621BD0BB7002BF8F0 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 				0730878021BD005D002BF8F0 /* ViewController.h */,
 				0730878121BD005D002BF8F0 /* ViewController.m */,
 				0730878321BD005D002BF8F0 /* Main.storyboard */,
+				073087AF21BD033B002BF8F0 /* Tools */,
 				0730878621BD005F002BF8F0 /* Assets.xcassets */,
 				0730878821BD005F002BF8F0 /* LaunchScreen.storyboard */,
 				0730878B21BD005F002BF8F0 /* Info.plist */,
@@ -130,6 +137,33 @@
 				073087A321BD005F002BF8F0 /* Info.plist */,
 			);
 			path = LYToolsUITests;
+			sourceTree = "<group>";
+		};
+		073087AF21BD033B002BF8F0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				073087B421BD0B9C002BF8F0 /* UIView */,
+				073087B321BD0B90002BF8F0 /* NSString */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		073087B321BD0B90002BF8F0 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				073087B021BD049B002BF8F0 /* NSString+category.h */,
+				073087B121BD049B002BF8F0 /* NSString+category.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		073087B421BD0B9C002BF8F0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				073087B521BD0BB7002BF8F0 /* UIView+Frame.h */,
+				073087B621BD0BB7002BF8F0 /* UIView+Frame.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +299,8 @@
 				0730878221BD005D002BF8F0 /* ViewController.m in Sources */,
 				0730878D21BD005F002BF8F0 /* main.m in Sources */,
 				0730877F21BD005D002BF8F0 /* AppDelegate.m in Sources */,
+				073087B721BD0BB7002BF8F0 /* UIView+Frame.m in Sources */,
+				073087B221BD049B002BF8F0 /* NSString+category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
