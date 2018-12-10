@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
+///将图片裁剪到目标尺寸
+- (UIImage *)tl_imageScalingToTargetSize:(CGSize)targetSize;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

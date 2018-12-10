@@ -19,6 +19,7 @@
 		073087B721BD0BB7002BF8F0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087B621BD0BB7002BF8F0 /* UIView+Frame.m */; };
 		073087BB21BD1125002BF8F0 /* UIImage+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BA21BD1125002BF8F0 /* UIImage+category.m */; };
 		073087BF21BD14D8002BF8F0 /* UIColor+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BE21BD14D8002BF8F0 /* UIColor+category.m */; };
+		073087C321BEAA30002BF8F0 /* NSArray+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087C221BEAA30002BF8F0 /* NSArray+category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,9 @@
 		073087BA21BD1125002BF8F0 /* UIImage+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+category.m"; sourceTree = "<group>"; };
 		073087BD21BD14D8002BF8F0 /* UIColor+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+category.h"; sourceTree = "<group>"; };
 		073087BE21BD14D8002BF8F0 /* UIColor+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+category.m"; sourceTree = "<group>"; };
+		073087C121BEAA30002BF8F0 /* NSArray+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+category.h"; sourceTree = "<group>"; };
+		073087C221BEAA30002BF8F0 /* NSArray+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+category.m"; sourceTree = "<group>"; };
+		073087C421BEAB5A002BF8F0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		073087AF21BD033B002BF8F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				073087C421BEAB5A002BF8F0 /* Header.h */,
+				073087C021BEAA00002BF8F0 /* NSArray */,
 				073087BC21BD14C0002BF8F0 /* UIColor */,
 				073087B821BD10D0002BF8F0 /* UIImage */,
 				073087B421BD0B9C002BF8F0 /* UIView */,
@@ -190,6 +196,15 @@
 				073087BE21BD14D8002BF8F0 /* UIColor+category.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		073087C021BEAA00002BF8F0 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				073087C121BEAA30002BF8F0 /* NSArray+category.h */,
+				073087C221BEAA30002BF8F0 /* NSArray+category.m */,
+			);
+			path = NSArray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +343,7 @@
 				0730878D21BD005F002BF8F0 /* main.m in Sources */,
 				0730877F21BD005D002BF8F0 /* AppDelegate.m in Sources */,
 				073087B721BD0BB7002BF8F0 /* UIView+Frame.m in Sources */,
+				073087C321BEAA30002BF8F0 /* NSArray+category.m in Sources */,
 				073087B221BD049B002BF8F0 /* NSString+category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
