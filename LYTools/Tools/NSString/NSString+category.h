@@ -18,6 +18,22 @@ NS_ASSUME_NONNULL_BEGIN
 ///隐藏电话号码中间四位
 + (NSString *)settingSecretStringWithPhoneNumber:(NSString *)phoneNumber;
 
+
+/**
+ string 转化为数组 一个字符(连空格)一个object
+
+ @return 数组
+ */
+- (NSArray *)tl_stringToArray;
+
+
+/**
+ 删除字符的空白字符包括换行符
+
+ @return NSString
+ */
+- (NSString *)tl_deleteStringAllBlank;
+
 @end
 
 NS_ASSUME_NONNULL_END

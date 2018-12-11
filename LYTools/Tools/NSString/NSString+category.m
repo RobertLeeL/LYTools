@@ -27,4 +27,21 @@
     return nil;
 }
 
+- (NSArray *)tl_stringToArray {
+    if (!self.length) {
+        return nil;
+    }
+    
+    NSMutableArray<NSString *> *array = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < self.length; i++) {
+        NSString *stringItem = [self substringWithRange:NSMakeRange(i, 1)];
+        [array addObject:stringItem];
+    }
+    return [array copy];
+}
+
+- (NSString *)tl_deleteStringAllBlank {
+    return [self stringByReplacingOccurrencesOfString:@"\\s" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, self.length)];
+}
+
 @end
