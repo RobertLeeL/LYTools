@@ -20,6 +20,7 @@
 		073087BB21BD1125002BF8F0 /* UIImage+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BA21BD1125002BF8F0 /* UIImage+category.m */; };
 		073087BF21BD14D8002BF8F0 /* UIColor+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BE21BD14D8002BF8F0 /* UIColor+category.m */; };
 		073087C321BEAA30002BF8F0 /* NSArray+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087C221BEAA30002BF8F0 /* NSArray+category.m */; };
+		0776B9CD21C154D8006CB00E /* UIView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0776B9CC21C154D8006CB00E /* UIView+Draggable.m */; };
 		0789000021C001880056912F /* NSURL+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789FFFF21C001880056912F /* NSURL+category.m */; };
 		0789FFF921BEBB2C0056912F /* UIView+LYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789FFF821BEBB2C0056912F /* UIView+LYToast.m */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		073087BE21BD14D8002BF8F0 /* UIColor+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+category.m"; sourceTree = "<group>"; };
 		073087C121BEAA30002BF8F0 /* NSArray+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+category.h"; sourceTree = "<group>"; };
 		073087C221BEAA30002BF8F0 /* NSArray+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+category.m"; sourceTree = "<group>"; };
+		0776B9CB21C154D8006CB00E /* UIView+Draggable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Draggable.h"; sourceTree = "<group>"; };
+		0776B9CC21C154D8006CB00E /* UIView+Draggable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Draggable.m"; sourceTree = "<group>"; };
 		0789FFF721BEBB2C0056912F /* UIView+LYToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LYToast.h"; sourceTree = "<group>"; };
 		0789FFF821BEBB2C0056912F /* UIView+LYToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYToast.m"; sourceTree = "<group>"; };
 		0789FFFE21C001880056912F /* NSURL+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+category.h"; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				073087B621BD0BB7002BF8F0 /* UIView+Frame.m */,
 				0789FFF721BEBB2C0056912F /* UIView+LYToast.h */,
 				0789FFF821BEBB2C0056912F /* UIView+LYToast.m */,
+				0776B9CB21C154D8006CB00E /* UIView+Draggable.h */,
+				0776B9CC21C154D8006CB00E /* UIView+Draggable.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			files = (
 				0730878221BD005D002BF8F0 /* ViewController.m in Sources */,
 				073087BF21BD14D8002BF8F0 /* UIColor+category.m in Sources */,
+				0776B9CD21C154D8006CB00E /* UIView+Draggable.m in Sources */,
 				073087BB21BD1125002BF8F0 /* UIImage+category.m in Sources */,
 				0730878D21BD005F002BF8F0 /* main.m in Sources */,
 				0730877F21BD005D002BF8F0 /* AppDelegate.m in Sources */,
