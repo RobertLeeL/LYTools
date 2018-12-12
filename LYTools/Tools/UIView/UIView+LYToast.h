@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LYToastCofigure;
+@class LYToast;
+
 @interface UIView (LYToast)
 
 
@@ -28,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param message message
  @param duration duration
  */
-- (void)showToast:(NSString *)message duration:(NSTimeInterval)duration;
+- (void)showToast:(NSString *)message duration:(CGFloat)duration;
 
 
 
@@ -37,9 +40,20 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param message message
  @param duration duration
- @param point 位置
+ @param position 位置
  */
-- (void)showToast:(NSString *)message duration:(NSTimeInterval)duration point:(CGPoint)point;
+- (void)showToast:(NSString *)message duration:(CGFloat)duration position:(CGPoint)position;
+
+
+- (void)showToast:(NSString *)message duration:(CGFloat)duration position:(CGPoint)position cofigure:(LYToastCofigure *)cofigure;
+
+- (void)hideToast;
+
+- (void)hideToast:(LYToast *)toast;
+
+- (void)hideAllToasts;
+
+- (void)clearToastQueue;
 
 @end
 
@@ -47,10 +61,46 @@ NS_ASSUME_NONNULL_BEGIN
 ///配置Toast
 @interface LYToastCofigure : NSObject
 
+@property (nonatomic, assign) CGFloat duration;
+
+@property (nonatomic, strong) UIColor *backgroundColor;
+
+@property (nonatomic, strong) UIColor *titleColor;
+
+@property (nonatomic, strong) UIColor *messageColor;
+
+@property (nonatomic, strong) UIFont *titleFont;
+
+@property (nonatomic, strong) UIFont *messageFont;
+
+@property (nonatomic, assign) CGFloat alpha;
+
+@property (nonatomic, assign) CGFloat minWidthPercentage;
+
+@property (nonatomic, assign) CGFloat maxHeightPercentage;
+
+@property (nonatomic, assign) CGFloat cornerRadius;
+
+@property (nonatomic, assign) CGFloat horizontalPadding;
+
+@property (nonatomic, assign) CGFloat verticalPadding;
+
+@property (nonatomic, assign) CGSize imageSize;
+
+@property (nonatomic, assign) BOOL queueEnabled;
+
 @end
 
 ///ToastView
 @interface LYToast : UIView
+
+- (instancetype)initWithTitle:(NSString *)title;
+
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message;
+
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image cofigure:(LYToastCofigure *)cofigure;
 
 @end
 
