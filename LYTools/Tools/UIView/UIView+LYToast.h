@@ -96,11 +96,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithTitle:(NSString *)title;
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message;
+- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message;
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message image:(nullable UIImage *)image;
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image cofigure:(LYToastCofigure *)cofigure;
+- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message image:(nullable UIImage *)image cofigure:(nullable LYToastCofigure *)cofigure;
 
 @end
 
