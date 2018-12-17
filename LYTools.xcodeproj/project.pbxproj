@@ -21,6 +21,7 @@
 		073087BF21BD14D8002BF8F0 /* UIColor+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087BE21BD14D8002BF8F0 /* UIColor+category.m */; };
 		073087C321BEAA30002BF8F0 /* NSArray+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 073087C221BEAA30002BF8F0 /* NSArray+category.m */; };
 		0776B9CD21C154D8006CB00E /* UIView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0776B9CC21C154D8006CB00E /* UIView+Draggable.m */; };
+		0776BA0F21C8004E006CB00E /* NSDictionary+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0776BA0E21C8004E006CB00E /* NSDictionary+Category.m */; };
 		0789000021C001880056912F /* NSURL+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789FFFF21C001880056912F /* NSURL+category.m */; };
 		0789FFF921BEBB2C0056912F /* UIView+LYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789FFF821BEBB2C0056912F /* UIView+LYToast.m */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,8 @@
 		073087C221BEAA30002BF8F0 /* NSArray+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+category.m"; sourceTree = "<group>"; };
 		0776B9CB21C154D8006CB00E /* UIView+Draggable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Draggable.h"; sourceTree = "<group>"; };
 		0776B9CC21C154D8006CB00E /* UIView+Draggable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Draggable.m"; sourceTree = "<group>"; };
+		0776BA0D21C8004E006CB00E /* NSDictionary+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Category.h"; sourceTree = "<group>"; };
+		0776BA0E21C8004E006CB00E /* NSDictionary+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Category.m"; sourceTree = "<group>"; };
 		0789FFF721BEBB2C0056912F /* UIView+LYToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LYToast.h"; sourceTree = "<group>"; };
 		0789FFF821BEBB2C0056912F /* UIView+LYToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYToast.m"; sourceTree = "<group>"; };
 		0789FFFE21C001880056912F /* NSURL+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+category.h"; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 		073087AF21BD033B002BF8F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0776BA0C21C80035006CB00E /* NSDictionary */,
 				0789FFF321BEB9AB0056912F /* LYUtils */,
 				0789FFFD21C000EA0056912F /* NSURL */,
 				073087C021BEAA00002BF8F0 /* NSArray */,
@@ -218,6 +222,15 @@
 				073087C221BEAA30002BF8F0 /* NSArray+category.m */,
 			);
 			path = NSArray;
+			sourceTree = "<group>";
+		};
+		0776BA0C21C80035006CB00E /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				0776BA0D21C8004E006CB00E /* NSDictionary+Category.h */,
+				0776BA0E21C8004E006CB00E /* NSDictionary+Category.m */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 		0789FFF321BEB9AB0056912F /* LYUtils */ = {
@@ -376,6 +389,7 @@
 				0789FFF921BEBB2C0056912F /* UIView+LYToast.m in Sources */,
 				0789000021C001880056912F /* NSURL+category.m in Sources */,
 				073087C321BEAA30002BF8F0 /* NSArray+category.m in Sources */,
+				0776BA0F21C8004E006CB00E /* NSDictionary+Category.m in Sources */,
 				073087B221BD049B002BF8F0 /* NSString+category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
