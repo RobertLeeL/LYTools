@@ -19,21 +19,25 @@
 
 @end
 
+@interface LYToast()
+
+@property (nonatomic, strong) UILabel *title;
+
+@property (nonatomic, strong) UILabel *message;
+
+@end
+
 @implementation LYToast
 
 - (instancetype)initWithTitle:(NSString *)title {
-    return [self initWithTitle:title message:nil];
+    return [self initWithTitle:title message:nil cofigure:nil];
 }
 
 - (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message {
-    return [self initWithTitle:title message:message image:nil];
+    return [self initWithTitle:title message:message cofigure:nil];
 }
 
-- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message image:(nullable UIImage *)image {
-    return [self initWithTitle:title message:message image:image cofigure:nil];
-}
-
-- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message image:(nullable UIImage *)image cofigure:(nullable LYToastCofigure *)cofigure {
+- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message cofigure:(nullable LYToastCofigure *)cofigure {
     self = [super init];
     if (self) {
         

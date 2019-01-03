@@ -13,12 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 @class LYToastCofigure;
 @class LYToast;
 
+typedef NS_ENUM(NSInteger, LYToastPosition) {
+    LYToastPositionTop = 0,
+    LYToastPositionCenter = 1,
+    LYToastPositionBottom = 2
+};
+
 @interface UIView (LYToast)
 
 
 
 /**
- Toast默认在中间 默认时长2秒
+ Toast默认在中间 默认时长1.5秒
 
  @param message message
  */
@@ -34,18 +40,29 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showToast:(NSString *)message duration:(CGFloat)duration;
 
 
+- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration;
 
 /**
  设置Toast位置
 
+ @param title 标题
  @param message message
  @param duration duration
  @param position 位置
  */
-- (void)showToast:(NSString *)message duration:(CGFloat)duration position:(CGPoint)position;
+- (void)showToast:(NSString *)title message: (NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position;
 
 
-- (void)showToast:(NSString *)message duration:(CGFloat)duration position:(CGPoint)position cofigure:(LYToastCofigure *)cofigure;
+/**
+ 初始化方法
+
+ @param title 标题
+ @param message 内容
+ @param duration duration
+ @param position 位置 默认中间
+ @param cofigure 配置
+ */
+- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position cofigure:(LYToastCofigure *)cofigure;
 
 - (void)hideToast;
 
@@ -53,7 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)hideAllToasts;
 
-- (void)clearToastQueue;
 
 @end
 
@@ -61,33 +77,42 @@ NS_ASSUME_NONNULL_BEGIN
 ///配置Toast
 @interface LYToastCofigure : NSObject
 
+///显示时间，默认1.5秒
 @property (nonatomic, assign) CGFloat duration;
 
+/// 背景颜色 默认黑色
 @property (nonatomic, strong) UIColor *backgroundColor;
 
+/// 标题颜色 默认白色
 @property (nonatomic, strong) UIColor *titleColor;
 
+/// 内容字体颜色 默认白色
 @property (nonatomic, strong) UIColor *messageColor;
 
+/// 标题字体大小 默认16
 @property (nonatomic, strong) UIFont *titleFont;
 
+/// 内容字体大小 默认16
 @property (nonatomic, strong) UIFont *messageFont;
 
+/// 透明度 默认0.7
 @property (nonatomic, assign) CGFloat alpha;
 
+/// 最小宽度 0.6
 @property (nonatomic, assign) CGFloat minWidthPercentage;
 
+/// 最大宽度 0.8
 @property (nonatomic, assign) CGFloat maxHeightPercentage;
 
+/// 圆角 默认 6.0
 @property (nonatomic, assign) CGFloat cornerRadius;
 
+/// 字体距离View垂直距离 inset
 @property (nonatomic, assign) CGFloat horizontalPadding;
 
+/// 字体距离View水平距离 inset
 @property (nonatomic, assign) CGFloat verticalPadding;
 
-@property (nonatomic, assign) CGSize imageSize;
-
-@property (nonatomic, assign) BOOL queueEnabled;
 
 @end
 
@@ -98,9 +123,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message;
 
-- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message image:(nullable UIImage *)image;
-
-- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message image:(nullable UIImage *)image cofigure:(nullable LYToastCofigure *)cofigure;
+- (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message cofigure:(nullable LYToastCofigure *)cofigure;
 
 @end
 
