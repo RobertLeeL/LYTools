@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
 - (void)showToast:(NSString *)message duration:(CGFloat)duration;
 
 
-- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration;
+- (void)showToast:(nullable NSString *)title message:(NSString *)message duration:(CGFloat)duration;
 
 /**
  设置Toast位置
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
  @param duration duration
  @param position 位置
  */
-- (void)showToast:(NSString *)title message: (NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position;
+- (void)showToast:(nullable NSString *)title message: (NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position;
 
 
 /**
@@ -107,11 +107,13 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
 /// 圆角 默认 6.0
 @property (nonatomic, assign) CGFloat cornerRadius;
 
-/// 字体距离View垂直距离 inset
+/// 字体距离View垂直距离 inset 默认10
 @property (nonatomic, assign) CGFloat horizontalPadding;
 
-/// 字体距离View水平距离 inset
+/// 字体距离View水平距离 inset 默认10
 @property (nonatomic, assign) CGFloat verticalPadding;
+
+- (instancetype)initWithDefaultStyle NS_DESIGNATED_INITIALIZER;
 
 
 @end

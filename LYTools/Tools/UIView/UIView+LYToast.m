@@ -10,12 +10,40 @@
 
 @implementation UIView (LYToast)
 
+- (void)showToast:(NSString *)message {
+    [self showToast:message duration:0];
+}
+
+- (void)showToast:(NSString *)message duration:(CGFloat)duration {
+    [self showToast:nil message:message duration:duration];
+}
+
+- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration {
+    [self showToast:title message:message duration:duration position:LYToastPositionCenter];
+}
+
+- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position {
+    [self showToast:title message:message duration:duration position:position cofigure:nil];
+}
+
+- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position cofigure:(LYToastCofigure *)cofigure {
+    
+}
+
 @end
 
 
 @implementation LYToastCofigure
 
-
+- (instancetype)initWithDefaultStyle {
+    self = [super init];
+    if (self) {
+        self.duration = 1.5;
+        self.backgroundColor = [UIColor blackColor];
+        self.titleColor = [UIColor whiteColor];
+    }
+    return self;
+}
 
 @end
 
