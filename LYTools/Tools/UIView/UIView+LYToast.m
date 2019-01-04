@@ -27,6 +27,21 @@
 }
 
 - (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position cofigure:(LYToastCofigure *)cofigure {
+    if (!message) {
+        return;
+    }
+    NSArray *subViewArray = self.subviews;
+    for (UIView *subview in subViewArray) {
+        if ([subview isKindOfClass:[LYToast class]]) {
+            [subview removeFromSuperview];
+        }
+    }
+    if (!cofigure) {
+        cofigure = [[LYToastCofigure alloc] initWithDefaultStyle];
+    }
+    LYToast *toast = [[LYToast alloc] initWithTitle:title message:message cofigure:cofigure];
+    
+    
     
 }
 
@@ -38,9 +53,19 @@
 - (instancetype)initWithDefaultStyle {
     self = [super init];
     if (self) {
-        self.duration = 1.5;
+        self.duration = 1.5f;
         self.backgroundColor = [UIColor blackColor];
         self.titleColor = [UIColor whiteColor];
+        self.messageColor = [UIColor whiteColor];
+        self.titleFont = [UIFont systemFontOfSize:16];
+        self.messageFont = [UIFont systemFontOfSize:14];
+        self.alpha = 0.7f;
+        self.maxWidthPercentage = 0.8f;
+        self.maxHeightPercentage = 0.8f;
+        self.cornerRadius = 6.0f;
+        self.horizontalPadding = 10.0f;
+        self.verticalPadding = 10.0f;
+        self.titleMessagePadding = 10.0f;
     }
     return self;
 }
@@ -52,6 +77,8 @@
 @property (nonatomic, strong) UILabel *title;
 
 @property (nonatomic, strong) UILabel *message;
+
+@property (nonatomic, strong) LYToastCofigure *cofig;
 
 @end
 
@@ -68,9 +95,26 @@
 - (instancetype)initWithTitle:(NSString *)title message:(nullable NSString *)message cofigure:(nullable LYToastCofigure *)cofigure {
     self = [super init];
     if (self) {
+        self.backgroundColor = cofigure.backgroundColor;
+        self.alpha = cofigure.alpha;
+        if (title) {
+            self.title = [[UILabel alloc] init];
+            self.title.text = title;
+            self.title.font = cofigure.titleFont;
+            self.title.textColor = cofigure.titleColor;
+            [self addSubview:self.title];
+        }
+        self.message = [[UILabel alloc] init];
+        self.message.text = message;
+        self.message.font = cofigure.messageFont;
+        self.message.textColor = cofigure.messageColor;
+        [self addSubview:self.message];
+        self.cofig = cofigure;
+        
         
     }
     return self;
 }
+
 
 @end

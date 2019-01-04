@@ -13,9 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 @class LYToastCofigure;
 @class LYToast;
 
+#define LYToastTopPadding 44
+#define LYToastBottonPadding 44
+
 typedef NS_ENUM(NSInteger, LYToastPosition) {
-    LYToastPositionTop = 0,
-    LYToastPositionCenter = 1,
+    LYToastPositionTop = 1,
+    LYToastPositionCenter = 0,
     LYToastPositionBottom = 2
 };
 
@@ -62,14 +65,9 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
  @param position 位置 默认中间
  @param cofigure 配置
  */
-- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position cofigure:(LYToastCofigure *)cofigure;
+- (void)showToast:(NSString *)title message:(NSString *)message duration:(CGFloat)duration position:(LYToastPosition)position cofigure:(nullable LYToastCofigure *)cofigure;
 
 - (void)hideToast;
-
-- (void)hideToast:(LYToast *)toast;
-
-- (void)hideAllToasts;
-
 
 @end
 
@@ -98,8 +96,8 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
 /// 透明度 默认0.7
 @property (nonatomic, assign) CGFloat alpha;
 
-/// 最小宽度 0.6
-@property (nonatomic, assign) CGFloat minWidthPercentage;
+/// 最大宽度 0.8
+@property (nonatomic, assign) CGFloat maxWidthPercentage;
 
 /// 最大宽度 0.8
 @property (nonatomic, assign) CGFloat maxHeightPercentage;
@@ -112,6 +110,9 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
 
 /// 字体距离View水平距离 inset 默认10
 @property (nonatomic, assign) CGFloat verticalPadding;
+
+/// 标题和message的距离 默认10
+@property (nonatomic, assign) CGFloat titleMessagePadding;
 
 - (instancetype)initWithDefaultStyle NS_DESIGNATED_INITIALIZER;
 
