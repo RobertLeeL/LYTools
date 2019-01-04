@@ -114,6 +114,7 @@ typedef NS_ENUM(NSInteger, LYToastPosition) {
 /// 标题和message的距离 默认10
 @property (nonatomic, assign) CGFloat titleMessagePadding;
 
+
 - (instancetype)initWithDefaultStyle NS_DESIGNATED_INITIALIZER;
 
 

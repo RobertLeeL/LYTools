@@ -110,11 +110,12 @@
         self.message.textColor = cofigure.messageColor;
         [self addSubview:self.message];
         self.cofig = cofigure;
-        
-        
     }
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+}
 
 @end
