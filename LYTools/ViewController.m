@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Tools/NSString/NSString+category.h"
+#import "Tools/UIView/UIView+LYToast.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,7 @@
     NSDate *date =  [string dateFromString];
     NSLog(@"%@",date);
     
+    [self.view showToast:@"你好"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

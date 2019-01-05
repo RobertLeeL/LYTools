@@ -7,6 +7,7 @@
 //
 
 #import "UIView+LYToast.h"
+#import <objc/runtime.h>
 
 @implementation UIView (LYToast)
 
@@ -41,6 +42,7 @@
     }
     LYToast *toast = [[LYToast alloc] initWithTitle:title message:message cofigure:cofigure];
     
+    [self addSubview:toast];
     
     
 }
@@ -116,6 +118,17 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    UIView *superView = self.superview;
+    CGFloat superWidth = superView.frame.size.width;
+    CGFloat superHeight = superView.frame.size.height;
+    
+    CGSize maxSize = CGSizeMake(superWidth * self.cofig.maxWidthPercentage, superHeight * self.cofig.maxHeightPercentage);
+    
+    if (self.title) {
+        
+    }
+    
 }
 
 @end
